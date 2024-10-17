@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100"
+style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.moveTo(100, 0);
+ctx.lineTo(100, 100);
+
+ctx.moveTo(0, 50);
+ctx.lineTo(200, 50);
+ctx.stroke();
+
+ctx.font = "12px Arial";
+ctx.fillStyle = "black";
+ctx.fillText("Y", 85, 15);
+ctx.fillText("X", 185, 45);
+
+ctx.fillText("20", 105, 15);
+ctx.fillText("20", 185, 65);
+ctx.fillText("-20", 105, 95);
+ctx.fillText("-20", 5, 65);
+
+ctx.beginPath();
+ctx.moveTo(100, 0);
+ctx.lineTo(97, 10);
+ctx.lineTo(103, 10);
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(200, 50);
+ctx.lineTo(190, 53);
+ctx.lineTo(190, 47); 
+ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(100, 50); 
+ctx.lineTo(110, 42.5); 
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(110, 42.5, 2, 0, 2 * Math.PI);
+ctx.fill();
+
+ctx.fillText("V₁", 105, 35);
+
+ctx.beginPath();
+ctx.moveTo(100, 50); 
+ctx.lineTo(130, 27.5);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(130, 27.5, 2, 0, 2 * Math.PI);
+ctx.fill();
+
+ctx.fillText("3V₁", 122, 43);
+
+ctx.beginPath();
+ctx.moveTo(100, 50); 
+ctx.lineTo(150, 12.5);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(150, 12.5, 2, 0, 2 * Math.PI); 
+ctx.fill();
+
+ctx.fillText("5V₁", 150, 25);
+
+</script>
+
+</body>
+</html>
